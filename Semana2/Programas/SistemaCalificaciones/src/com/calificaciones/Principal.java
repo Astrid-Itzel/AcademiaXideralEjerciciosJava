@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class Principal {
 
-	private static final boolean String = false;
-
 	public static void main(String[] args) {
 
 		//creo una lista de alumnos
@@ -43,9 +41,6 @@ public class Principal {
 		String nombreAlumno = scanner.nextLine();
 		
 		 boolean encontrado = false;
-		 
-		 //declaración de array en caso de que el usuari quiera establecer todas las calificaciones a la vez
-		 double[] calificaciones = new double[5];
 
 		
 		for (Estudiante estudiante : listaAlumnos) {
@@ -106,14 +101,21 @@ public class Principal {
                     
 					}else if (respuesta2.equals("2")) {
 						
-						System.out.println("Por favor introduce las 5 calificaciones separadas por un espacio en el siguiente orden: Matemàticas, Geografìa, Español, Informàtica y Educación física.");
-						String califIntroducidas = scanner.nextLine();
+						System.out.println("Por favor introduce las 5 calificaciones separadas por un espacio en el siguiente orden: Matemàticas, Geografìa, Español, Informática y Educación física.");
 						
-						
-				        double[] calificacionesArray = new double[5]; // Suponemos que siempre se ingresan 5 calificaciones
+						 // Inicializamos array de calificaciones. Siempre se ingresan 5 calificaciones
+				        double[] calificacionesArray = new double[5];
 
 				        // Llamamos al método para validar las calificaciones
 				        revisarCalificacion(scanner, calificacionesArray);
+				        
+				        
+				        // Asignamos las calificaciones al objeto Estudiante
+				        estudiante.setScoreMaths(calificacionesArray[0]);
+				        estudiante.setScoreGeography(calificacionesArray[1]);
+				        estudiante.setScoreSpanish(calificacionesArray[2]);
+				        estudiante.setScoreIT(calificacionesArray[3]);
+				        estudiante.setScorePE(calificacionesArray[4]);
 				        
 				        formularioCompletado = true;
 					}
@@ -146,7 +148,7 @@ public class Principal {
 	}//cierre main
 	
 	
-		//método para berificar si la calificación es válida
+		//método para verificar si la calificación es válida
 		public static double revisarCalificacion (Scanner scanner) {
 			double calificacion = -1; //valor fuera de rango para poder inicializar
 			
@@ -171,6 +173,8 @@ public class Principal {
 			return calificacion;
 		}
 		
+		
+		
 		//OVERLOADING
 		//método que recibe y verifica conjunto de calificaciones, recibe un array
 		public static void revisarCalificacion(Scanner scanner, double[] calificaciones) {
@@ -179,10 +183,12 @@ public class Principal {
 			String[] partes = scanner.nextLine().split(" ");
 			
 			// Verificamos que se hayan ingresado exactamente 5 calificaciones
-	        do{
-			if (partes.length != 5) {
-	            System.out.println("Por favor ingresa exactamente 5 calificaciones.");  
-	        }}while (partes.length != 5);
+		    while (true) {
+		        System.out.println("Por favor ingresa exactamente 5 calificaciones separadas por un espacio.");
+		        partes = scanner.nextLine().split(" ");
+		        if (partes.length == 5) break;  // Salimos del bucle si son exactamente 5
+		        System.out.println("Error: Debes ingresar exactamente 5 calificaciones.");
+		    }
 			
 			//iteramos sobre las calificaciones
 			for (int i = 0; i < calificaciones.length; i++) {
