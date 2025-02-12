@@ -1,0 +1,16 @@
+Which of the following statement are true?
+
+
+• 	StringBuilder es generalmente más rápido que string buffer. //VERDADERO
+
+
+StringBuilder es más rápido que StringBuffer porque no es sincronizado, lo que significa que no tiene que manejar bloqueos cuando múltiples hilos intentan acceder a él al mismo tiempo.
+
+StringBuffer, en cambio, es sincronizado, lo que lo hace más seguro para múltiples hilos, pero también introduce una sobrecarga en el rendimiento debido a la gestión de la sincronización.
+
+• 	StringBuffer es thread-safe; stringBuilder no lo es. //VERDADERO
+	
+
+StringBuffer es seguro para múltiples hilos (thread-safe) porque sus métodos están sincronizados, lo que significa que solo un hilo puede modificar su contenido a la vez.
+
+StringBuilder NO es thread-safe, lo que significa que si varios hilos intentan modificarlo al mismo tiempo, puede haber inconsistencias en los datos.
