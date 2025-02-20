@@ -1,0 +1,151 @@
+id_producto,producto,stock_disponible,precio,descuento
+P001,Juguete de tren,58,138.67,48
+P002,Dado gigante,58,149.25,40
+P003,Pelota de tenis para niños,60,100.24,2
+P004,Bola de playa,84,67.68,24
+P005,Peluche de pingüino,18,131,7
+P006,Pelota de baloncesto,91,106.25,33
+P007,Juguete para niños pequeños,74,86.44,50
+P008,Peluche de tortuga,67,5.32,49
+P009,Puzzle en 3D,18,18.11,27
+P010,Tienda de campaña para niños,100,103.19,16
+P011,Bicicleta con rueditas,15,18.93,13
+P012,Coche de policía,84,50.91,26
+P013,Barco a control remoto,92,106.4,13
+P014,Patines en línea,92,103.65,10
+P015,Juego de arcilla,29,8.57,13
+P016,Juguete de control remoto,24,30.73,0
+P017,Pelota de tenis para niños,36,39.61,44
+P018,Set de arte,28,136.6,21
+P019,Rompecabezas infantil,68,101.53,23
+P020,Peluche de panda,34,101.26,7
+P021,Juego de pesca magnética,83,82.52,40
+P022,Coche de bomberos,63,96.27,16
+P023,Set de cocina infantil,44,83.85,11
+P024,Patinete eléctrico,51,59.7,50
+P025,Peluche de cocodrilo,31,71.33,48
+P026,Bicicleta de carreras,61,89.63,18
+P027,Juego de memoria,50,85.79,13
+P028,Juego de pescar,14,35.39,25
+P029,Juego de cartas de aventura,30,43.9,19
+P030,Juego de arcilla,47,87.65,9
+P031,Estuche de arte para niños,57,147.2,23
+P032,Puzzle educativo,14,128.79,36
+P033,Juego de construcción de madera,35,81.55,38
+P034,Marionetas de mano,58,79.26,27
+P035,Juego de pistas de carreras,95,62.44,38
+P036,Peluche de jirafa,23,98.73,48
+P037,Pelota de tenis para niños,89,146.93,3
+P038,Juego de pescar,30,90.1,5
+P039,Peluches en forma de frutas,72,140.41,45
+P040,Peluche de cocodrilo,77,111.55,16
+P041,Dinosaurio interactivo,66,86.48,6
+P042,Peluche de conejo,25,60.75,28
+P043,Coche de policía,20,28.96,17
+P044,Carrito de carreras,91,132.54,14
+P045,Juguete de madera para bebé,75,65.12,2
+P046,Juego de construcción de madera,15,30.91,29
+P047,Set de herramientas para niños,75,8.18,11
+P048,Dinosaurio de plástico,92,107.74,25
+P049,Puzzle educativo,75,30.09,30
+P050,Flauta musical,95,122.5,14
+P051,Dinosaurio de plástico,28,135.5,43
+P052,Lego de temática espacial,34,130.8,49
+P053,Cubo Rubik,68,46.5,21
+P054,Raquetas de tenis para niños,37,117.08,38
+P055,Muñeca de trapo,27,110.62,30
+P056,Carro de carreras con control remoto,15,122.25,35
+P057,Set de cocina miniatura,75,90.86,4
+P058,Patinete eléctrico,45,22.75,11
+P059,Flauta musical,71,87.27,4
+P060,Patinete de ruedas grandes,18,59.72,3
+P061,Juego de construcción de madera,48,30.62,37
+P062,Muñeco articulado,25,80.51,8
+P063,Set de disfraces,34,58.25,37
+P064,Dado gigante,82,115.06,42
+P065,Set de veterinario,80,116.53,40
+P066,Estuche de arte para niños,34,85.39,12
+P067,Peluches de animales marinos,93,38.42,46
+P068,Patinete eléctrico,81,56.89,45
+P069,Carro de bomberos,53,83.04,28
+P070,Juego de ajedrez para niños,46,10.17,24
+P071,Mochila de juguetes,13,62.52,26
+P072,Juego de mesa familiar,80,123.09,21
+P073,Barbie,61,37.38,22
+P074,Lego avanzado,43,40.46,49
+P075,Marionetas de mano,62,125.91,4
+P076,Figura de acción de superhéroes,75,62.85,9
+P077,Juego de tablero,97,85.1,31
+P078,Juego de ajedrez para niños,75,32.82,25
+P079,Pelota inflable,32,116.58,29
+P080,Juego de pesca magnética,51,25.12,44
+P081,Bola saltarina,17,22,5
+P082,Bicicleta para niñas,18,84.15,28
+P083,Juego de mesa familiar,82,70.37,8
+P084,Bicicleta con ruedas de entrenamiento,21,149.5,36
+P085,Peluche de perro,92,139.26,25
+P086,Lego básico,17,122.18,44
+P087,Estuche de arte para niños,81,71.03,21
+P088,Carro de bomberos,21,73.91,10
+P089,Juego de pistas de carreras,88,120.19,6
+P090,Peluche de zorra,100,87.67,48
+P091,Juguete de tren,69,65.23,44
+P092,Juego de bloques,78,64.64,23
+P093,Kit de explorador,12,145.09,10
+P094,Flauta musical,19,148.46,47
+P095,Cometa voladora,20,121.82,4
+P096,Cometa de juguete,83,29.71,1
+P097,Peluche de perro,55,29.13,3
+P098,Juego de pesca magnética,52,68.99,45
+P099,Peluche de pingüino,67,24.32,41
+P100,Muñeca de silicona,89,17.62,35
+P101,Set de arte,48,59.16,36
+P102,Set de jardinería para niños,73,17.37,21
+P103,Peluche de delfín,25,137.17,32
+P104,Bicicleta con rueditas,50,103.14,7
+P105,Set de arte,91,28.77,11
+P106,Aro de hula hula,47,23.19,23
+P107,Peluche de león,90,12.12,46
+P108,Bicicleta para niñas,12,97.11,49
+P109,Juguete para mascotas,91,62.26,14
+P110,Set de herramientas para niños,78,8.51,32
+P111,Osito de peluche,32,105.65,50
+P112,Juguete de madera,52,49.84,27
+P113,Patinete para adultos,70,128.15,41
+P114,Peluche de tigre,97,23.53,17
+P115,Juguete para mascotas,28,29.55,19
+P116,Aventuras en el bosque,21,102.29,25
+P117,Osito de peluche,51,19.95,7
+P118,Lego avanzado,86,101.52,19
+P119,Ajedrez para niños,15,6.58,18
+P120,Juguete de tren,51,146.05,8
+P121,Tienda de campaña para niños,78,30.83,6
+P122,Juego de pesca magnética,13,74.52,24
+P123,Camión de bomberos,74,127.57,16
+P124,Juego de construcción de madera,33,87.46,27
+P125,Peluche de tortuga,98,21.73,21
+P126,Mochila de juguetes,61,67.79,19
+P127,Juego de cartas,30,66.09,9
+P128,Muñeca de Barbie con accesorios,39,144.18,6
+P129,Mochila de juguetes,54,149.13,39
+P130,Pelota de fútbol,14,56.64,17
+P131,Carro de bomberos con sirena,67,114.27,29
+P132,Lego de temática espacial,77,105.92,14
+P133,Coche de policía,50,141.14,50
+P134,Peluche de jirafa,34,133.99,40
+P135,Osito de peluche,13,16.13,10
+P136,Muñeca de Barbie con accesorios,58,146.92,47
+P137,Pelota de baloncesto,70,102.57,6
+P138,Aventuras en el bosque,68,80.2,32
+P139,Set de cocina miniatura,22,60.23,29
+P140,Juego de mesa de cartas,28,85.88,45
+P141,Bola de nieve,87,56.03,39
+P142,Juguete de control remoto,32,120,32
+P143,Dinosaurio interactivo,10,78.33,15
+P144,Juego de cartas de aventura,41,59.73,2
+P145,Set de cocina infantil,97,83.35,45
+P146,Rompecabezas de animales,17,25.01,22
+P147,Caballito de madera,45,62.1,3
+P148,Peluche de perro,49,91.83,24
+P149,Mini patinete,77,140.85,33
+P150,Juguete educativo,61,87.22,50
