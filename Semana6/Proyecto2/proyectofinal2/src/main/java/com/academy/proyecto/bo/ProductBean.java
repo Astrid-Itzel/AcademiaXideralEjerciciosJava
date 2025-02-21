@@ -16,4 +16,17 @@ public class ProductBean {
 	private int stock;
 	private Double price;
 	private Integer descuento;
+	private Double precioConDescuento;
+	
+
+	public void setPrice(Double price) {
+	    this.price = price;		
+	}
+
+
+	public void setDescuento(Integer descuento) {
+	    this.descuento = descuento;		
+		
+	} 
+
 }

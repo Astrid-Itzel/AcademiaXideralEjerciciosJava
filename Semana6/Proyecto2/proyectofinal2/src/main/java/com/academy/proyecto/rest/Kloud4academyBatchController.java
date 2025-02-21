@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,6 +72,16 @@ public class Kloud4academyBatchController {
                     }
                     count++;
                 }
+                
+             // Calcular el precio con descuento
+                double precioConDescuento = productData.getPrice() * (1 - (productData.getDescuento() / 100.0));
+
+             // Redondear a 2 decimales usando BigDecimal
+                BigDecimal bd = new BigDecimal(precioConDescuento).setScale(2, RoundingMode.HALF_UP);
+                productData.setPrecioConDescuento(bd.doubleValue()); // Establecer el precio con descuento redondeado
+                
+          
+                
                 productInfoList.add(productData); // Agregar el producto a la lista
             }
 
