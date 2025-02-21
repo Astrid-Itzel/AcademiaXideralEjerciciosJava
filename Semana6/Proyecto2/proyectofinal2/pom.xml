@@ -3,17 +3,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- Especifica el padre del proyecto, en este caso Spring Boot -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.8</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath /> 
 	</parent>
+	
+	<!-- Identificación del proyecto -->
 	<groupId>com.proyecto2</groupId>
 	<artifactId>proyectofinal2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>proyectofinal2</name>
 	<description>Proyecto Final Academia V2</description>
+	
 	<url />
 	<licenses>
 		<license />
@@ -27,24 +32,33 @@
 		<tag />
 		<url />
 	</scm>
+	
+	<!-- Define propiedades globales del proyecto -->
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	
+	<!-- Dependencias del proyecto -->
 	<dependencies>
+	
+	<!-- Starter para usar Spring Boot con MongoDB -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 
+	<!-- Starter para crear aplicaciones web con Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
+		<!-- Dependencia para manejar archivos CSV con OpenCSV, ya que no usamos Spring Batch-->
 		<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
 			<version>4.1</version>
+				
 				<!--Hacemos exclusión de commons-logging-->
 				<!--Debido al mensaje de advertencia relacionado con la presencia de la biblioteca commons-logging.jar en el classpath, que puede generar conflictos con el sistema de registro (logging) que Spring usa internamente.-->
 			    <exclusions>
@@ -53,13 +67,16 @@
             <artifactId>commons-logging</artifactId>
         </exclusion>
     </exclusions>
-    
 		</dependency>
+		
+		<!-- Biblioteca Lombok para reducir código en Java. e.g. creación de getters y setters-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<!-- Starter para pruebas con Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

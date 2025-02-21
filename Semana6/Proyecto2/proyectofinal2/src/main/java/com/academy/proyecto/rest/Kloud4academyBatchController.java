@@ -23,40 +23,52 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+@RestController   // Indica que esta clase es un controlador REST
 public class Kloud4academyBatchController {
 
-    @Value("${file.input}")
+    @Value("${file.input}")  //// Obtiene la ruta del archivo CSV desde application.properties
     private String fileInput;
 
-    @Autowired
+
+    @Autowired  //// Inyecta el objeto MongoTemplate
     private MongoTemplate mongoTemplate;
 
     @GetMapping("/mongodbbulkupdate")
     public String directHomePage() {
         try {
-            commitBulkUpdateToMongoDB();
+            commitBulkUpdateToMongoDB();  // Llama al método que procesa los datos
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "Mongodb Bulk Update Processed";
     }
 
+    /*Método para procesar y actualizar en MongoDB los datos obtenidos de un archivo CSV.*/
     private void commitBulkUpdateToMongoDB() {
         try {
+        	
+        	// Lee el archivo CSV usando BufferedReader
         	BufferedReader reader = new BufferedReader(new FileReader(fileInput));
         	CSVParser parser = new CSVParserBuilder().withSeparator(',').build();
-        	CSVReader csvReader = new CSVReaderBuilder(reader).withCSVParser(parser).withSkipLines(1).build();
+        	CSVReader csvReader = new CSVReaderBuilder(reader)
+        													.withCSVParser(parser)
+        													.withSkipLines(1) /*Omite la primera línea (encabezados)*/
+        													.build();
 
             List<String[]> allData = csvReader.readAll();
             int count = 0;
+            
             ProductBean productData = null;
             List<ProductBean> productInfoList = new ArrayList<>();
 
+            
+            // Procesar la información del CSV, cada fila.
             for (String[] productRow : allData) {
                 String[] productArry = new String[productRow.length];
                 productData = new ProductBean();
                 count = 0;
+                
+                // Asigna los valores del CSV a los atributos del producto
                 for (String productInfo : productRow) {
   
                 	if (count == 0) {
@@ -73,10 +85,10 @@ public class Kloud4academyBatchController {
                     count++;
                 }
                 
-             // Calcular el precio con descuento
+             // Calcula el precio con descuento
                 double precioConDescuento = productData.getPrice() * (1 - (productData.getDescuento() / 100.0));
 
-             // Redondear a 2 decimales usando BigDecimal
+             // Redondea a 2 decimales usando BigDecimal
                 BigDecimal bd = new BigDecimal(precioConDescuento).setScale(2, RoundingMode.HALF_UP);
                 productData.setPrecioConDescuento(bd.doubleValue()); // Establecer el precio con descuento redondeado
                 
@@ -95,10 +107,13 @@ public class Kloud4academyBatchController {
                 bulkOps.upsert(query, update);
             });
 
+            // Muestra el total de productos procesados.
             System.out.println("Total de productos a insertar/actualizar: " + productInfoList.size());
             
+            // Ejecuta la operación bulk en MongoDB.
             BulkWriteResult result = bulkOps.execute();
 
+            // Muestra los resultados de la actualización.
             System.out.println("Número de documentos modificados: " + result.getModifiedCount());
             System.out.println("Número de documentos insertados: " + result.getUpserts().size());
             
